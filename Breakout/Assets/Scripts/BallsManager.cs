@@ -61,7 +61,7 @@ public class BallsManager : MonoBehaviour
     {
         Vector3 startingPostion = new Vector3(
             Paddle.Instance.gameObject.transform.position.x, 
-            Paddle.Instance.gameObject.transform.position.y + .50f, 0);
+            Paddle.Instance.gameObject.transform.position.y, 0);
         initialBall = Instantiate(ballPreefab, startingPostion, Quaternion.identity);
         initialBallRb = initialBall.GetComponent<Rigidbody2D>();
 

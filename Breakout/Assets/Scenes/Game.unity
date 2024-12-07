@@ -788,8 +788,8 @@ MonoBehaviour:
   AvailableDebuffs:
   - {fileID: 1220592434683805196, guid: ba35261b02a6d4192a2b246bd83a3a06, type: 3}
   - {fileID: 7599771614372284238, guid: 8c6b62cae0a7340d59cdfe6051efa36d, type: 3}
-  buffSpawnChance: 83
-  debuffSpawnChance: 75
+  buffSpawnChance: 37.9
+  debuffSpawnChance: 10.4
 --- !u!1 &330189041
 GameObject:
   m_ObjectHideFlags: 0
@@ -7223,17 +7223,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.012209535, y: -0.29854608}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 1.1999999, y: 0, z: 1.16, w: 0.59999996}
+    border: {x: 1.1999999, y: 0, z: 1.16, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.84, y: 1.28}
-    newSize: {x: 3.8, y: 1.24}
+    oldSize: {x: 3.84, y: 0.68}
+    newSize: {x: 3.84, y: 0.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.8290694, y: 0.63430357}
+  m_Size: {x: 4, y: 0.67}
   m_EdgeRadius: 0
 --- !u!212 &1731383930
 SpriteRenderer:
@@ -7279,12 +7279,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf6d1a14bf200438bbbe9f96e71bbcd8, type: 3}
+  m_Sprite: {fileID: 1264896610976568777, guid: bf6d1a14bf200438bbbe9f96e71bbcd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 3.8, y: 1.24}
+  m_Size: {x: 3.84, y: 0.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7299,7 +7299,7 @@ Transform:
   m_GameObject: {fileID: 1731383928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalPosition: {x: 0, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

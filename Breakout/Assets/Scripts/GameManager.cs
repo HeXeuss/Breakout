@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
-    
+
+    public bool isPaused = false;
+    [SerializeField] private GameObject pauseMenu;
     public GameObject gameOverScreen;
     public GameObject victoryScreen;
     public bool IsGameStarted { get; set; }
@@ -31,13 +33,40 @@ public class GameManager : MonoBehaviour
     public static event Action<int> OnLivesLost;
     
     private void Start()
-    {
+    {        
         lives = availableLives;
         Screen.SetResolution(1920, 1080, false);
         Ball.OnBallDeath += OnBallDeath;
         Brick.OnDestruction += OnDestruction;
     }
 
+    private void OnDestroy()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !victoryScreen.activeSelf && !gameOverScreen.activeSelf)
+        {
+            if (pauseMenu.activeSelf)
+            {
+                Resume();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    public void LoadNextLevel()
+    {
+        LevelMenu.levelNumber++;
+        SceneManager.LoadScene("Game");
+    }
+    
     private void OnDestruction(Brick brick)
     {
         if (BricksManager.Instance.remainingBricks.Count <= 0)
@@ -47,8 +76,6 @@ public class GameManager : MonoBehaviour
             BricksManager.Instance.LoadNextLevel();
         }
     }
-
- 
     
     private void OnBallDeath(Ball obj)
     {
@@ -104,6 +131,20 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         Ball.OnBallDeath -= OnBallDeath;
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
+    public void Resume()
+    {
+        isPaused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
     
     

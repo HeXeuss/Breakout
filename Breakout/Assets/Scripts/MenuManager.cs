@@ -1,9 +1,18 @@
+using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    
+    
     public GameObject levelMenu;
+
+    public void ResetLevels()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
     void Update()
     {

@@ -54,7 +54,10 @@ public class Paddle : MonoBehaviour
    
     void Update()
     {
-        Paddlemovement();
+        if (!GameManager.Instance.isPaused)
+        {
+            Paddlemovement();
+        }
     }
    
     private void Paddlemovement()

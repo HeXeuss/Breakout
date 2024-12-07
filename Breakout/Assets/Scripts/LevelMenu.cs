@@ -7,7 +7,7 @@ public class LevelMenu : MonoBehaviour
     public static int levelNumber = 1;
     public Button[] buttons;
     public GameObject levelButtons;
-    
+
     private void Awake()
     {
         ButtonsToArray();

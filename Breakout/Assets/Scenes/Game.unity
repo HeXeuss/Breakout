@@ -11385,7 +11385,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 409337398}
   gameOverScreen: {fileID: 539735135}
   victoryScreen: {fileID: 1271840998}
-  settingsMenu: {fileID: 2009754635}
   availableLives: 3
 --- !u!1 &1794072819
 GameObject:
@@ -12727,7 +12726,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2009754635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d9d646e66ce48078d125604536fac0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b1c5a0ed8cbb47e4bce61df3fbbae61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2022779779

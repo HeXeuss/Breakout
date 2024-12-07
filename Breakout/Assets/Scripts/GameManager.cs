@@ -64,6 +64,10 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         LevelMenu.levelNumber++;
+        if (LevelMenu.levelNumber > 20)
+        {
+            LevelMenu.levelNumber = 1;
+        }
         SceneManager.LoadScene("Game");
     }
     

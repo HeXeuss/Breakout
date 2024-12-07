@@ -69,10 +69,21 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    void UnlockNewLevel()
+    {
+        if (LevelMenu.levelNumber >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", LevelMenu.levelNumber + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
+    }
     
     public void ShowVictoryScreen()
     {
         victoryScreen.SetActive(true);
+        UnlockNewLevel();
     }
     
     public void RestartGame()

@@ -24,7 +24,7 @@ public class BricksManager : MonoBehaviour
     }
 
     #endregion
-
+    
     public static event Action onLevelLoaded;
     public int InitialBricksCount { set; get; }
     public float shiftAmount = 1f;
@@ -84,7 +84,7 @@ public class BricksManager : MonoBehaviour
     }
     private List<int[,]> LoadLevelData()
     {
-        TextAsset textAsset = Resources.Load("levels") as TextAsset;
+        TextAsset textAsset = Resources.Load("Level" + LevelMenu.levelNumber) as TextAsset;
         string[] rows = textAsset.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
         
         List<int[,]> levelData = new List<int[,]>();

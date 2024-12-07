@@ -79,9 +79,21 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     private void OnDisable()
     {
         Ball.OnBallDeath -= OnBallDeath;
     }
+    
+    
 }

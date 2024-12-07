@@ -65,8 +65,8 @@ public class Paddle : MonoBehaviour
         
         // Adjust clamps to account for half the paddle's width
         float halfPaddleWidth = spriteRenderer.bounds.extents.x;
-        float leftClamp = screenLeft + halfPaddleWidth;
-        float rightClamp = screenRight - halfPaddleWidth;
+        float leftClamp = -12.1f + halfPaddleWidth;
+        float rightClamp = 12.1f - halfPaddleWidth;
         
         // Get mouse position in world coordinates
         

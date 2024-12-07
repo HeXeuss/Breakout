@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     
     
     public GameObject levelMenu;
+    public GameObject settingsMenu;
 
     public void ResetLevels()
     {
@@ -21,6 +22,11 @@ public class MenuManager : MonoBehaviour
             if (levelMenu.activeSelf)
             {
                 levelMenu.SetActive(false);
+            }
+
+            if (settingsMenu.activeSelf)
+            {
+                settingsMenu.SetActive(false);
             }
         }
     }

@@ -6,19 +6,28 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     public AudioClip backgroundMusic;
-    public static float volume = 0.5f;
     public Slider volumeSlider;
+
     private void Start()
     {
-        volumeSlider.value = volume;
+        // Load the saved volume from PlayerPrefs, default to 0.5 if no value exists
+        float savedVolume = PlayerPrefs.GetFloat("Volume", 0.5f);
+
+        // Apply the saved volume
+        audioSource.volume = savedVolume;
+        volumeSlider.value = savedVolume;
+
+        // Set up the audio source
         audioSource.clip = backgroundMusic;
         audioSource.Play();
     }
 
     private void Update()
     {
-        volume = volumeSlider.value;
-        audioSource.volume = volume;
+        // Update the audio volume based on the slider value
+        audioSource.volume = volumeSlider.value;
+
+        // Save the current volume to PlayerPrefs
+        PlayerPrefs.SetFloat("Volume", volumeSlider.value);
     }
-    
 }

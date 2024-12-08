@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {        
-        
+        Cursor.visible = false;
         lives = availableLives;
         Ball.OnBallDeath += OnBallDeath;
         Brick.OnDestruction += OnDestruction;
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
+        Cursor.visible = true;
     }
 
     void Update()
@@ -90,6 +91,7 @@ public class GameManager : MonoBehaviour
             if (this.lives < 1)
             {
                 gameOverScreen.SetActive(true);
+                Cursor.visible = true;
             }
             else
             {
@@ -115,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         victoryScreen.SetActive(true);
         UnlockNewLevel();
+        Cursor.visible = true;
     }
     
     public void RestartGame()
@@ -142,6 +145,7 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
+        Cursor.visible = true;
     }
     
     public void Resume()
@@ -149,6 +153,7 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
     
     

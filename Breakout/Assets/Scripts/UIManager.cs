@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-   public TextMeshProUGUI scoreText;
+   public TextMeshProUGUI levelText;
    public TextMeshProUGUI targetText;
    public TextMeshProUGUI livesText;
  
@@ -31,20 +31,17 @@ public class UIManager : MonoBehaviour
    private void OnLevelLoaded()
    {
       UpdateRemainingBricksText();
-      UpdateScoreText(0);
+      UpdateLevelText();
    }
    
-   private void UpdateScoreText(int increament)
+   private void UpdateLevelText()
    {
-      this.score += increament;
-      string scoreStr = this.score.ToString().PadLeft(5, '0');
-      scoreText.text = $@"SCORE:{Environment.NewLine}{scoreStr}";
+      levelText.text = $@"LEVEL:{Environment.NewLine}{LevelMenu.levelNumber}";
    }
 
    private void OnDestruction(Brick obj)
    {
       UpdateRemainingBricksText();
-      UpdateScoreText(10);
    }
 
    private void UpdateRemainingBricksText()

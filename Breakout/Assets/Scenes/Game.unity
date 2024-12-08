@@ -1173,8 +1173,8 @@ MonoBehaviour:
   AvailableDebuffs:
   - {fileID: 1220592434683805196, guid: ba35261b02a6d4192a2b246bd83a3a06, type: 3}
   - {fileID: 7599771614372284238, guid: 8c6b62cae0a7340d59cdfe6051efa36d, type: 3}
-  buffSpawnChance: 37.9
-  debuffSpawnChance: 10.4
+  buffSpawnChance: 100
+  debuffSpawnChance: 0
 --- !u!1 &330189041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,7 +4254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 82.50002, y: -30.259995}
+  m_AnchoredPosition: {x: 71.4, y: -30.7}
   m_SizeDelta: {x: 65.49, y: 24.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571949779
@@ -7495,7 +7495,7 @@ GameObject:
   - component: {fileID: 1140745149}
   - component: {fileID: 1140745148}
   m_Layer: 0
-  m_Name: ScoreText
+  m_Name: LevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7517,7 +7517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -83.29002, y: -30.259995}
+  m_AnchoredPosition: {x: -68.6, y: -30.7}
   m_SizeDelta: {x: 66.28, y: 24.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140745148
@@ -7540,9 +7540,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:
+  m_text: 'Level:
 
-    00000'
+    0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f258f08c6c4c41ce8aa7493f123ce2d, type: 2}
   m_sharedMaterial: {fileID: -6417762761771077560, guid: 4f258f08c6c4c41ce8aa7493f123ce2d, type: 2}
@@ -11566,7 +11566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb622403f252411a8b08c7fe7846fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1140745148}
+  levelText: {fileID: 1140745148}
   targetText: {fileID: 571949779}
   livesText: {fileID: 645530804}
 --- !u!1 &1843174113

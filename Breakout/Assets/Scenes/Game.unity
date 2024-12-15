@@ -1173,8 +1173,8 @@ MonoBehaviour:
   AvailableDebuffs:
   - {fileID: 1220592434683805196, guid: ba35261b02a6d4192a2b246bd83a3a06, type: 3}
   - {fileID: 7599771614372284238, guid: 8c6b62cae0a7340d59cdfe6051efa36d, type: 3}
-  buffSpawnChance: 100
-  debuffSpawnChance: 0
+  buffSpawnChance: 33
+  debuffSpawnChance: 17
 --- !u!1 &330189041
 GameObject:
   m_ObjectHideFlags: 0
